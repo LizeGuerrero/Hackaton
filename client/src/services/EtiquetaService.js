@@ -93,7 +93,7 @@ export const deleteEtiqueta = async (id) => {
 // Función para buscar etiquetas por nombre (usada para autocompletado)
 export const searchEtiquetas = async (query) => {
   try {
-    const response = await fetch(`http://localhost:5000/etiquetas/search?query=${query}`);
+      const response = await fetch(`http://localhost:5000/etiquetas/search?query=${query}`);
       if (!response.ok) {
           throw new Error('No se pudo obtener las etiquetas');
       }

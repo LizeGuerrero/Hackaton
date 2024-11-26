@@ -32,6 +32,7 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li><Link to="/appManager">App</Link></li>
+            <li><Link to="/Auth">Login</Link></li>
             <li>
               <button className="login-btn" onClick={toggleAuthModal}>👤
                 

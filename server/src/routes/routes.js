@@ -19,6 +19,16 @@ import {
   deleteEtiqueta
 } from "../controllers/etiquetasController.js"; // Importamos todos los controladores para etiquetas
 
+import {
+  getUsuarios,
+  getUsuarioById,
+  addUsuario,
+  updateUsuario,
+  deleteUsuario
+} from '../controllers/usuariosController.js'; // Importamos los controladores
+
+
+
 // Rutas para aplicaciones
 router.get('/aplicaciones', getAplicaciones);
 router.get('/aplicaciones/:id', getAplicacionesById);
@@ -32,5 +42,12 @@ router.get('/etiquetas/:id', getEtiquetaById); // Obtener una etiqueta por ID
 router.post('/etiquetas', addEtiqueta); // Crear una nueva etiqueta
 router.put('/etiquetas/:id', updateEtiqueta); // Actualizar una etiqueta por ID
 router.delete('/etiquetas/:id', deleteEtiqueta); // Eliminar una etiqueta por ID
+
+// Rutas para usuarios
+router.get('/usuarios', getUsuarios); // Obtener todos los usuarios
+router.get('/usuarios/:id', getUsuarioById); // Obtener un usuario por ID
+router.post('/usuarios', addUsuario); // Crear un nuevo usuario
+router.put('/usuarios/:id', updateUsuario); // Actualizar un usuario por ID
+router.delete('/usuarios/:id', deleteUsuario); // Eliminar un usuario por ID
 
 export default router; // Exportamos el router para utilizarlo en el archivo principal (index.js)
